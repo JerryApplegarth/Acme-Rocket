@@ -1,8 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ['./build/*.html'],
+	content: [ './build/*.html' ],
 	theme: {
-		extend: {},
-	},
-	plugins: [],
+		extend: {
+			screen: {
+				'widescreen': { 'raw': '(aspect-ratio: 3/2)' },
+				'tallscreen': { 'raw': '(aspect-ratio: 1/2)' },
+			},
+		},
+		plugins: [],
+	}
 };
